@@ -1,0 +1,63 @@
+{
+  "name": "@kivzdev/icons",
+  "version": "0.1.0",
+  "description": "Kivz's icon set for React: filled by default, outline at any line width, and every icon moves in its own way on hover, press or a change of state. Tree-shakeable, server-rendered, no dependencies.",
+  "license": "MIT",
+  "author": "Kivz (https://kivz.dev)",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/kivzdev/kivz-icons.git",
+    "directory": "packages/icons"
+  },
+  "bugs": "https://github.com/kivzdev/kivz-icons/issues",
+  "keywords": [
+    "react",
+    "icons",
+    "svg",
+    "animated-icons",
+    "motion",
+    "filled",
+    "outline",
+    "reduced-motion"
+  ],
+  "type": "module",
+  "sideEffects": false,
+  "exports": {
+    ".": {
+      "types": "./dist/index.d.ts",
+      "import": "./dist/index.js"
+    },
+    "./motion": {
+      "types": "./dist/motion.d.ts",
+      "import": "./dist/motion.js"
+    },
+    "./all": {
+      "types": "./dist/icons/all.d.ts",
+      "import": "./dist/icons/all.js"
+    },
+    "./icons/*": {
+      "types": "./dist/icons/*.d.ts",
+      "import": "./dist/icons/*.js"
+    },
+    "./package.json": "./package.json"
+  },
+  "module": "./dist/index.js",
+  "types": "./dist/index.d.ts",
+  "files": [
+    "dist",
+    "README.md",
+    "LICENSE"
+  ],
+  "scripts": {
+    "build": "node -e \"require('node:fs').rmSync('dist', { recursive: true, force: true })\" && tsc -p tsconfig.build.json",
+    "prepack": "node ../../scripts/copy-readme.ts",
+    "prepublishOnly": "node ../../scripts/release-check.ts"
+  },
+  "peerDependencies": {
+    "react": ">=18"
+  },
+  "publishConfig": {
+    "access": "public",
+    "provenance": true
+  }
+}

@@ -1,0 +1,118 @@
+/* The preview, in kivz.dev's own parts (the kivz-design skill: tokens.css + the site's frame, controls, tables and
+   figure plate): a rail on the left with the switches, one 556 px column centred on the page. Only what this page uses. */
+
+.site {
+  display: grid;
+  grid-template-columns: var(--rail) minmax(var(--s8), 1fr) minmax(0, var(--col)) minmax(var(--s8), 1fr) var(--rail);
+  min-height: 100svh;
+  padding-inline: var(--edge);
+}
+
+/* ── the rail: the logo, then the switches, every control one width (the widest's) and one left edge ─────────── */
+.rail { position: sticky; top: 0; z-index: 4; align-self: start; display: flex; flex-direction: column; width: max-content; padding-top: var(--top) }
+.logo { display: block; width: 20px; height: 20px; margin-left: calc(var(--ctl-x) + (var(--icon) - 20px) / 2); color: var(--fg) }
+.logo svg { width: 20px; height: 20px }
+/* (the first label's line on the column's first line: both centred on the start line's control box) */
+.controls { display: flex; flex-direction: column; gap: var(--s6); margin-top: calc(var(--start) + (var(--ctl) - 16px) / 2 - var(--top) - 20px) }
+.control { display: flex; flex-direction: column; gap: var(--s2) }
+.control > .label { padding-left: var(--ctl-x); font-size: 13px; line-height: 16px }
+
+.btn {
+  position: relative; z-index: 1;
+  display: flex; align-items: center; gap: var(--s2);
+  height: var(--ctl); padding-inline: var(--ctl-x); border-radius: var(--ctl-r);
+  color: var(--fg-2); white-space: nowrap;
+  transition: color 0.25s, background-color 0.25s;
+}
+.btn svg { flex: none; width: var(--icon); height: var(--icon) }
+.btn[data-on] { color: var(--fg) }
+.btn:focus-visible { outline: 1px solid var(--fg-2); outline-offset: 2px }
+.btn-solo:hover, .btn-solo:focus-visible { background: var(--fill); color: var(--fg) }
+
+/* a switch: equal boxes in a row, one highlight that glides to the hovered one and rests under the chosen one
+   (it moves by transform only, on the site's spring; the words take their colour from it) */
+.pills-x { position: relative; display: grid; grid-auto-flow: column; grid-auto-columns: minmax(42px, 1fr) }
+.pills-x .btn { justify-content: center; padding-inline: var(--s2); font-size: 13px }
+.pill {
+  position: absolute; top: 0; left: 0; height: 100%; border-radius: var(--ctl-r); background: var(--fill); pointer-events: none;
+  transition: transform 0.5s var(--ease-spring), opacity 0.25s var(--ease-soft); will-change: transform;
+}
+
+/* ── the column ───────────────────────────────────────────────────────────────────────────────────────────────── */
+.col { grid-column: 3; padding-top: calc(var(--start) + (var(--ctl) - var(--lh)) / 2); padding-bottom: var(--s20) }
+.page { display: flex; flex-direction: column; gap: var(--s8) }
+.hello { display: flex; flex-direction: column; gap: var(--s2) }
+.block { display: flex; flex-direction: column; gap: var(--s3) }
+.block > h2 span + span { margin-left: var(--s1) }
+.prose { display: flex; flex-direction: column; gap: var(--s5) }
+.prose code, .hello code { padding: 1px 5px; border-radius: 4px; background: var(--well); font: 400 12.5px/1 ui-monospace, 'SF Mono', Menlo, monospace }
+.u { text-decoration: underline 1px var(--fg-2); text-underline-offset: 3px; transition: text-decoration-color 0.25s }
+.u:hover { text-decoration-color: var(--fg) }
+
+/* ── the stage: the picked icon on a figure's plate, both weights big and at the sizes it's used at ──────────── */
+.figure { display: flex; flex-direction: column; gap: var(--s4) }
+.plate {
+  position: relative; display: flex; flex-direction: column; align-items: center; justify-content: center; gap: var(--s8);
+  height: 300px; border-radius: var(--plate-r); background: var(--well); overflow: hidden; isolation: isolate;
+}
+.plate-big { display: flex; gap: var(--s15); color: var(--fg) }
+.plate-big svg { width: 96px; height: 96px }
+.plate-sizes { display: flex; align-items: flex-end; gap: var(--s8); color: var(--fg) }
+.plate-sizes figure { display: flex; flex-direction: column; align-items: center; gap: var(--s2) }
+.plate-sizes figcaption { font-size: 13px; line-height: 16px; color: var(--fg-2) }
+.figure-bar { display: flex; justify-content: center; gap: var(--s2) }
+.caption { max-width: 400px; margin-inline: auto; font-size: 13px; line-height: 18px; color: var(--fg-2); text-align: center; text-wrap: balance }
+.caption b { font-weight: 500; color: var(--fg) }
+.idea { font-style: normal }
+
+/* ── ruled tables: a group shows its label once; its rows are ruled across the titles only, a new group across the
+   whole width; hovering a row dims the others (a beat's delay on the way back, so crossing a rule doesn't flash) ─ */
+.years { display: flex; flex-direction: column }
+.year { display: grid; grid-template-columns: var(--year) minmax(0, 1fr); border-top: 1px solid var(--hair) }
+.y { display: flex; align-items: center; height: calc(var(--row) - 1px) }
+.items li { display: flex; align-items: center; height: calc(var(--row) - 1px) }
+.items li + li { height: var(--row); border-top: 1px solid var(--hair) }
+.row { display: flex; align-items: center; gap: var(--s3); width: 100%; height: 100%; text-align: left; cursor: pointer }
+.row:focus-visible { outline: 1px solid var(--fg-2); outline-offset: -1px; border-radius: 2px }
+.row-icon { flex: none; display: grid; place-items: center; width: 24px; height: 24px }
+.row-title { flex: 1; min-width: 0; overflow: hidden; text-overflow: ellipsis; white-space: nowrap }
+.row-detail { flex: none; color: var(--fg-2) }
+.row[aria-current='true'] .row-title::after { content: ''; display: inline-block; width: 4px; height: 4px; margin-left: var(--s2); border-radius: 2px; background: var(--fg); vertical-align: 2px }
+.items li { transition: color 0.35s var(--ease-soft) 0.08s }
+@media (hover: hover) {
+  .years:has(.items li:hover) .items li:not(:hover) { color: var(--fg-2); transition-delay: 0s }
+  .items li:hover { transition-delay: 0s }
+}
+
+/* the names still to draw: one wrapped line of them per group, the ★ ones (first to draw) in white */
+.names { padding-block: var(--s2); color: var(--fg-2) }
+.names .first { color: var(--fg) }
+.names span + span::before { content: ' · '; color: var(--fg-2) }
+
+/* ── coming in: the rail and the column rise a little and settle, 50 ms apart; nothing appears all at once ──── */
+[data-in] { animation: rise 0.85s var(--ease-settle) both; animation-delay: calc(0.1s + var(--i, 0) * 50ms) }
+@keyframes rise { from { opacity: 0; translate: 0 8px } }
+@media (prefers-reduced-motion: reduce) {
+  [data-in] { animation: fade 0.4s ease both }
+  @keyframes fade { from { opacity: 0 } }
+}
+
+/* ── narrower ─────────────────────────────────────────────────────────────────────────────────────────────────── */
+@media (max-width: 1179px) {
+  .site { grid-template-columns: var(--rail) minmax(var(--s8), 1fr) minmax(0, var(--col)) minmax(var(--s8), 1fr) }
+}
+@media (max-width: 759px) {
+  /* (the label column holds group names, longer than kivz.dev's years: "Communication" needs 105 px) */
+  .site { display: block; padding-inline: var(--s5); --year: 112px }
+  .rail { position: static; width: auto; padding-top: var(--top) }
+  .logo { margin-left: 0 }
+  .controls { flex-direction: row; flex-wrap: wrap; gap: var(--s4) var(--s5); margin-top: var(--s6) }
+  .control > .label { padding-left: 0 }
+  .col { padding-top: var(--s10) }
+  .plate { height: 260px; gap: var(--s6) }
+  .plate-big { gap: var(--s8) }
+  .plate-big svg { width: 72px; height: 72px }
+  .plate-sizes { gap: var(--s5) }
+  .row-detail { display: none }
+  .y { align-items: flex-start; padding-top: var(--s2); height: auto; min-height: calc(var(--row) - 1px) }
+}

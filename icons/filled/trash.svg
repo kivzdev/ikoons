@@ -1,0 +1,8 @@
+<svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg" data-placeholder="true">
+<!-- PLACEHOLDER: a stand-in so the pipeline and the motions have something to run on. Replace it with Kivz's drawing of the same name (same file name, same layer names). -->
+<g id="lid">
+<path d="M3.75 5.5h16.5" stroke="#EAEAE9" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"/>
+<path d="M9.5 5.5V4.25a1.25 1.25 0 0 1 1.25-1.25h2.5a1.25 1.25 0 0 1 1.25 1.25V5.5" stroke="#EAEAE9" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+</g>
+<path id="can" d="M5.75 8.5h12.5l-1 10.7a2 2 0 0 1-2 1.8h-6.5a2 2 0 0 1-2-1.8Z" fill="#EAEAE9" stroke="#EAEAE9" stroke-width="2" stroke-linejoin="round"/>
+</svg>

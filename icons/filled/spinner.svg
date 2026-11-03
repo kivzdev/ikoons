@@ -1,0 +1,11 @@
+<svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg" data-placeholder="true">
+<!-- PLACEHOLDER: a stand-in so the pipeline and the motions have something to run on. Replace it with Kivz's drawing of the same name (same file name, same layer names). -->
+<path d="M12 7.4L12 3.4" stroke="#EAEAE9" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"/>
+<path d="M15.25 8.75L18.08 5.92" stroke="#EAEAE9" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" opacity="0.89"/>
+<path d="M16.6 12L20.6 12" stroke="#EAEAE9" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" opacity="0.78"/>
+<path d="M15.25 15.25L18.08 18.08" stroke="#EAEAE9" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" opacity="0.67"/>
+<path d="M12 16.6L12 20.6" stroke="#EAEAE9" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" opacity="0.56"/>
+<path d="M8.75 15.25L5.92 18.08" stroke="#EAEAE9" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" opacity="0.45"/>
+<path d="M7.4 12L3.4 12" stroke="#EAEAE9" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" opacity="0.34"/>
+<path d="M8.75 8.75L5.92 5.92" stroke="#EAEAE9" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" opacity="0.23"/>
+</svg>

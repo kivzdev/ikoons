@@ -1,0 +1,13 @@
+{
+  // the package: one ESM file per module (so a bundler drops every icon you don't import) and its .d.ts beside it
+  "extends": "./tsconfig.json",
+  "compilerOptions": {
+    "noEmit": false,
+    "declaration": true,
+    "declarationMap": false,
+    "sourceMap": false,
+    "outDir": "dist",
+    "rootDir": "src"
+  },
+  "include": ["src"]
+}

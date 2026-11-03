@@ -1,0 +1,5 @@
+<svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg" data-placeholder="true">
+<!-- PLACEHOLDER: a stand-in so the pipeline and the motions have something to run on. Replace it with Kivz's drawing of the same name (same file name, same layer names). -->
+<path id="roof" d="M3 10.5L12 3l9 7.5Z" fill="#EAEAE9" stroke="#EAEAE9" stroke-width="2" stroke-linejoin="round"/>
+<path id="base" d="M5.5 13h13v6a1.5 1.5 0 0 1-1.5 1.5H14v-5h-4v5H7A1.5 1.5 0 0 1 5.5 19Z" fill="#EAEAE9" stroke="#EAEAE9" stroke-width="2" stroke-linejoin="round"/>
+</svg>

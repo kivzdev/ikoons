@@ -1,0 +1,12 @@
+node_modules
+dist
+*.tsbuildinfo
+.DS_Store
+.vite
+# written by scripts/generate.ts from icons/ (npm run gen); never edit these by hand
+packages/icons/src/icons/
+# the package built by scripts/test/package.test.ts (removed after the test)
+packages/icons/.test-dist/
+# copied into the package at pack time from the repo root (scripts/copy-readme.ts)
+packages/icons/README.md
+packages/icons/LICENSE
