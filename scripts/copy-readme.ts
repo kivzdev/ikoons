@@ -6,7 +6,7 @@ import { fileURLToPath } from 'node:url'
 
 const root = new URL('..', import.meta.url)
 const pkg = new URL('packages/icons/', root)
-const REPO = 'https://github.com/kivzdev/kivz-icons/blob/main/'
+const REPO = 'https://github.com/kivzdev/ikoons/blob/main/'
 
 const readme = await readFile(new URL('README.md', root), 'utf8')
 await writeFile(

@@ -6,8 +6,8 @@
 //   __film.change('play → pause')                    a row of the Changes table, pressed (await it)
 //   __film.clear() / __film.release()                take the strip away / give the clock back
 
-import { playIcon } from '@kivzdev/icons'
-import { setClock } from '@kivzdev/icons/motion'
+import { playIcon } from 'ikoons'
+import { setClock } from 'ikoons/motion'
 
 let now = 0
 let waiting: (() => void)[] = []

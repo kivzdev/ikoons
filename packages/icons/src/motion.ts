@@ -1,4 +1,4 @@
-// @kivzdev/icons/motion — the motion toolkit the icons are made with, for icons of your own (createIcon) or to tune one:
+// ikoons/motion — the motion toolkit the icons are made with, for icons of your own (createIcon) or to tune one:
 // the recipes, the transitions, the curves (`ease.spring`…), and the clock (setClock, to drive time yourself in a test).
 
 export * from './motion/recipes.js'

@@ -23,4 +23,4 @@ jobs:
       - run: npm run build
       - run: npm run preview:build
       - name: The package packs
-        run: npm pack --dry-run -w @kivzdev/icons
+        run: npm pack --dry-run -w ikoons

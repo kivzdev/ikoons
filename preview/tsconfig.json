@@ -15,9 +15,9 @@
     "noUnusedParameters": true,
     "types": ["vite/client"],
     "paths": {
-      "@kivzdev/icons": ["../packages/icons/src/index.ts"],
-      "@kivzdev/icons/all": ["../packages/icons/src/icons/all.ts"],
-      "@kivzdev/icons/motion": ["../packages/icons/src/motion.ts"]
+      "ikoons": ["../packages/icons/src/index.ts"],
+      "ikoons/all": ["../packages/icons/src/icons/all.ts"],
+      "ikoons/motion": ["../packages/icons/src/motion.ts"]
     }
   },
   "include": ["src", "vite.config.ts"]

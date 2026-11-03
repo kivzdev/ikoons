@@ -1,15 +1,15 @@
 {
-  "name": "@kivzdev/icons",
+  "name": "ikoons",
   "version": "0.1.0",
   "description": "Kivz's icon set for React: filled by default, outline at any line width, and every icon moves in its own way on hover, press or a change of state. Tree-shakeable, server-rendered, no dependencies.",
   "license": "MIT",
   "author": "Kivz (https://kivz.dev)",
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/kivzdev/kivz-icons.git",
+    "url": "git+https://github.com/kivzdev/ikoons.git",
     "directory": "packages/icons"
   },
-  "bugs": "https://github.com/kivzdev/kivz-icons/issues",
+  "bugs": "https://github.com/kivzdev/ikoons/issues",
   "keywords": [
     "react",
     "icons",

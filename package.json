@@ -1,5 +1,5 @@
 {
-  "name": "kivz-icons-monorepo",
+  "name": "ikoons-monorepo",
   "private": true,
   "type": "module",
   "workspaces": [
@@ -8,7 +8,7 @@
   ],
   "scripts": {
     "gen": "node scripts/generate.ts",
-    "build": "npm run gen && npm run build -w @kivzdev/icons",
+    "build": "npm run gen && npm run build -w ikoons",
     "dev": "npm run gen && npm run dev -w preview",
     "preview:build": "npm run gen && npm run build -w preview",
     "typecheck": "npm run gen && tsc -p packages/icons && tsc -p preview && tsc -p .",

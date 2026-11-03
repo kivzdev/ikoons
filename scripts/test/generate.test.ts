@@ -17,7 +17,7 @@ const put = async (weight: 'filled' | 'outline', name: string, text: string) => 
 const out = (f: string) => readFile(join(root, 'packages/icons/src/icons', f), 'utf8')
 
 beforeEach(async () => {
-  root = await mkdtemp(join(tmpdir(), 'kivz-icons-'))
+  root = await mkdtemp(join(tmpdir(), 'ikoons-'))
 })
 afterEach(async () => {
   await rm(root, { recursive: true, force: true })

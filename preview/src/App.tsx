@@ -1,6 +1,6 @@
 import { useRef, useState, type CSSProperties } from 'react'
-import { IconProvider, KivzLogo, playIcon, Swap, type Icon, type Weight } from '@kivzdev/icons'
-import { all } from '@kivzdev/icons/all'
+import { IconProvider, KivzLogo, playIcon, Swap, type Icon, type Weight } from 'ikoons'
+import { all } from 'ikoons/all'
 import { entries, groups, pairs, type Entry } from '../../icons/catalog.ts'
 import { Switch } from './Switch'
 
@@ -62,7 +62,7 @@ export function App() {
         <main className="col">
           <div className="page">
             <header className="hello" data-in style={{ '--i': 1 } as CSSProperties}>
-              <h1>Icons</h1>
+              <h1>Ikoons</h1>
               <p className="muted">
                 Kivz’s own set, for React: filled by default, outline at any line width, and every icon moves its own
                 way. Hover one, or press a row to look at it closer.

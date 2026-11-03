@@ -1,6 +1,6 @@
-# @kivzdev/icons
+# Ikoons
 
-Kivz's icon set for React: **filled by default, outline at any line width, and every icon moves in its own way** — when
+Kivz's icon set for React (`ikoons` on npm): **filled by default, outline at any line width, and every icon moves in its own way** — when
 its button is hovered or pressed, when it fills in, or when it turns into another icon. One colour (`currentColor`),
 drawn on a 24-unit grid, server-rendered, tree-shakeable, no dependencies.
 
@@ -12,7 +12,7 @@ drawn on a 24-unit grid, server-rendered, tree-shakeable, no dependencies.
 ## Install
 
 ```sh
-npm install @kivzdev/icons
+npm install ikoons
 ```
 
 React 18 or later.
@@ -20,7 +20,7 @@ React 18 or later.
 ## Use
 
 ```tsx
-import { Bell, Heart, Trash } from '@kivzdev/icons'
+import { Bell, Heart, Trash } from 'ikoons'
 
 <button><Bell /> Notifications</button>       // the bell swings when the button is hovered
 <Heart weight="outline" strokeWidth={1.5} />  // outline, thinner lines
@@ -67,7 +67,7 @@ plays its motion as it lands (a heart beats as it fills, a star turns); filled �
 `Swap` shows one icon at a time and goes from one to the next:
 
 ```tsx
-import { Pause, Play, Swap } from '@kivzdev/icons'
+import { Pause, Play, Swap } from 'ikoons'
 
 <button onClick={toggle}><Swap icon={playing ? Pause : Play} /></button>
 ```
@@ -91,7 +91,7 @@ going back to the icon it's leaving turns the change round where it is.
 ## Defaults for a part of the page
 
 ```tsx
-import { IconProvider } from '@kivzdev/icons'
+import { IconProvider } from 'ikoons'
 
 <IconProvider size={14} weight="outline" strokeWidth={1.5} animate="press">…</IconProvider>
 ```
@@ -105,7 +105,7 @@ your bundle — one ES module per icon, no side effects — along with just the 
 ## Icons of your own
 
 The motions are a toolkit: `createIcon(name, { filled, outline }, { motion })` makes an icon component from a drawing,
-and `@kivzdev/icons/motion` has the recipes (`swing`, `nudge`, `hop`, `draw`, `twinkle`…), the changes (`morph`,
+and `ikoons/motion` has the recipes (`swing`, `nudge`, `hop`, `draw`, `twinkle`…), the changes (`morph`,
 `swap`…), the curves (`ease.spring`, `ease.glide`…) and `setClock`, to drive time yourself in a test.
 
 ## Drawing the set

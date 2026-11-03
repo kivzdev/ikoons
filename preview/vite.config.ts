@@ -30,7 +30,7 @@ function drawings(): Plugin {
     return running
   }
   return {
-    name: 'kivz-icons-drawings',
+    name: 'ikoons-drawings',
     async configureServer(server) {
       const log = (s: string) => s && server.config.logger.info(s, { timestamp: true })
       server.watcher.add(`${root}icons`)
@@ -46,9 +46,9 @@ export default defineConfig({
   plugins: [react(), drawings()],
   resolve: {
     alias: [
-      { find: /^@kivzdev\/icons\/all$/, replacement: lib('icons/all.ts') },
-      { find: /^@kivzdev\/icons\/motion$/, replacement: lib('motion.ts') },
-      { find: /^@kivzdev\/icons$/, replacement: lib('index.ts') },
+      { find: /^ikoons\/all$/, replacement: lib('icons/all.ts') },
+      { find: /^ikoons\/motion$/, replacement: lib('motion.ts') },
+      { find: /^ikoons$/, replacement: lib('index.ts') },
     ],
   },
   server: { port: 5198 },
