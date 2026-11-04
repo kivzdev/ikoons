@@ -30,10 +30,10 @@ describe('the catalog', () => {
     for (const n of names) expect(n).toMatch(/^[a-z0-9]+(-[a-z0-9]+)*$/)
     for (const e of entries.values()) expect(typeof e.motion[0]).toBe('string')
   })
-  it('names logos …-logo, with a colour or null', () => {
+  it('names logos …-logo, a logo taking its colour on hover with a colour or null', () => {
     for (const e of groups.find(g => g.id === 'brands')!.icons) {
       expect(e.name).toMatch(/-logo$/)
-      expect(e.brand === null || /^#[0-9a-f]{6}$/.test(e.brand!)).toBe(true)
+      if (e.motion[0] === 'brand') expect(e.brand === null || /^#[0-9a-f]{6}$/.test(e.brand!)).toBe(true)
     }
   })
   it('knows which layers a motion looks for', () => {
@@ -128,9 +128,9 @@ describe('generate', () => {
 })
 
 describe('the repo’s own drawings', () => {
-  it('all build, every one marked as a placeholder except Kivz’s logo', async () => {
+  it('all build, every one marked as a placeholder except Kivz’s own marks', async () => {
     const r = await generate()
     expect(r.drawn.length).toBeGreaterThan(20)
-    expect(r.drawn.filter(n => !r.placeholders.includes(n))).toEqual(['kivz-logo'])
+    expect(r.drawn.filter(n => !r.placeholders.includes(n))).toEqual(['kivz-logo', 'ikoons-logo'])
   })
 })

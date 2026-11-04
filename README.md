@@ -1,10 +1,15 @@
+<picture>
+  <source media="(prefers-color-scheme: dark)" srcset=".github/assets/ikoons-dark.svg">
+  <img src=".github/assets/ikoons-light.svg" width="52" height="52" alt="">
+</picture>
+
 # Ikoons
 
 Kivz's icon set for React (`ikoons` on npm): **filled by default, outline at any line width, and every icon moves in its own way** — when
 its button is hovered or pressed, when it fills in, or when it turns into another icon. One colour (`currentColor`),
 drawn on a 24-unit grid, server-rendered, tree-shakeable, no dependencies.
 
-> **Status:** the pipeline and the motions are in place; the drawings are on their way. Apart from `kivz-logo`, every
+> **Status:** the pipeline and the motions are in place; the drawings are on their way. Apart from Kivz's own two marks (`ikoons-logo`, `kivz-logo`), every
 > icon in the package today is a **placeholder** — marked as one in its file, its component (`data.placeholder`) and the
 > preview — and `npm publish` refuses to run while any are left. The set will have about 270 icons
 > ([icons/catalog.ts](icons/catalog.ts)); the ★ ones come first. Nothing is published yet.

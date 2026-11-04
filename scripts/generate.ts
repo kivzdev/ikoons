@@ -109,7 +109,8 @@ export async function generate({ root = ROOT }: { root?: string } = {}): Promise
     const weights = WEIGHTS.filter(w => d[w])
     const placeholder = weights.some(w => d[w]!.placeholder)
     if (placeholder) placeholders.push(name)
-    if (e.brand === undefined && weights.length < 2) warnings.push(`${name}: only ${weights[0]} is drawn — ${weights[0] === 'filled' ? 'outline' : 'filled'} shows it too`)
+    // (logos are drawn filled only)
+    if (e.group !== 'brands' && weights.length < 2) warnings.push(`${name}: only ${weights[0]} is drawn — ${weights[0] === 'filled' ? 'outline' : 'filled'} shows it too`)
     const seen = new Set<string>()
     for (const { part, extra } of needs(e.motion)) {
       if (seen.has(part)) continue

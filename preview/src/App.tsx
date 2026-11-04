@@ -1,5 +1,5 @@
 import { useRef, useState, type CSSProperties } from 'react'
-import { IconProvider, KivzLogo, playIcon, Swap, type Icon, type Weight } from 'ikoons'
+import { IconProvider, IkoonsLogo, playIcon, Swap, type Icon, type Weight } from 'ikoons'
 import { all } from 'ikoons/all'
 import { entries, groups, pairs, type Entry } from '../../icons/catalog.ts'
 import { Switch } from './Switch'
@@ -48,8 +48,9 @@ export function App() {
     <IconProvider weight={weight} strokeWidth={stroke} reducedMotion={still ? 'always' : 'user'}>
       <div className="site">
         <aside className="rail" data-in style={{ '--i': 0 } as CSSProperties}>
-          <a className="logo" href="https://kivz.dev" aria-label="kivz.dev">
-            <KivzLogo size={20} />
+          {/* the set's own mark, drawn by the set: it twinkles when it's hovered */}
+          <a className="logo" href="https://github.com/kivzdev/ikoons" aria-label="Ikoons on GitHub">
+            <IkoonsLogo size={20} />
           </a>
           <div className="controls">
             <Switch<Weight> label="Weight" value={weight} onChange={setWeight} options={[{ value: 'filled', label: 'Filled' }, { value: 'outline', label: 'Outline' }]} />
@@ -64,7 +65,7 @@ export function App() {
             <header className="hello" data-in style={{ '--i': 1 } as CSSProperties}>
               <h1>Ikoons</h1>
               <p className="muted">
-                Kivz’s own set, for React: filled by default, outline at any line width, and every icon moves its own
+                <a className="u" href="https://kivz.dev">Kivz</a>’s own set, for React: filled by default, outline at any line width, and every icon moves its own
                 way. Hover one, or press a row to look at it closer.
               </p>
             </header>

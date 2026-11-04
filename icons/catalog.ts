@@ -342,6 +342,8 @@ export const groups: readonly Group[] = [
     title: 'Brands and social',
     icons: [
       logo('kivz-logo', '#fdd900', { star: true, phosphor: null, idea: 'Kivz işareti (kivz.dev’in logosu)' }),
+      // (the set's own mark: a hand-drawn star, so it twinkles rather than taking a colour)
+      i('ikoons-logo', ['twinkle', { rot: 24 }], { star: true, phosphor: null, idea: 'Ikoons’un işareti (Kivz çizdi, 2026-11-04)' }),
       logo('github-logo', null, S),
       logo('gitlab-logo', '#fc6d26'),
       logo('npm-logo', '#cb3837', { ...S, phosphor: null }),
