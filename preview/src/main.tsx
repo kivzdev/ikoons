@@ -1,6 +1,8 @@
 import '@fontsource-variable/inter'
+import '@fontsource-variable/inter/opsz-italic.css' // (the banner's line is italic)
 import './tokens.css'
 import './page.css'
+import './scroll' // (the page's glide)
 import { StrictMode } from 'react'
 import { createRoot } from 'react-dom/client'
 import { App } from './App'

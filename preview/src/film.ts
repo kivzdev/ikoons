@@ -2,11 +2,11 @@
 // kivz-design asks ("verify motion by stepping frames"). The icons' clock is taken over, so nothing moves in real
 // time while it films; copies of the icon at each step are laid out in a strip over the page.
 //
-//   __film.icon('bell', { every: 0.06, n: 12 })      a row's icon playing its motion
+//   __film.icon('bell', { every: 0.06, n: 12 })      an icon in the grid (or a row's) playing its motion
 //   __film.change('play → pause')                    a row of the Changes table, pressed (await it)
 //   __film.clear() / __film.release()                take the strip away / give the clock back
 
-import { playIcon } from 'ikoons'
+import { playIcon } from '@lib/core/create'
 import { setClock } from 'ikoons/motion'
 
 let now = 0
@@ -60,6 +60,7 @@ const film = (label: string, svg: SVGSVGElement, { every = 0.05, n = 11, px = 76
 }
 
 const rowOf = (label: string) =>
+  document.querySelector<HTMLButtonElement>(`.cell[aria-label="${label}"]`) ??
   [...document.querySelectorAll<HTMLButtonElement>('.row')].find(b => b.querySelector('.row-title')?.textContent?.replace(' ★', '') === label)
 const until = async (ok: () => boolean, ms = 1000) => {
   const t0 = performance.now()

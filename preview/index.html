@@ -4,10 +4,19 @@
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <meta name="theme-color" content="#141414" />
-    <meta name="description" content="Kivz's icon set: filled by default, outline at any line width, every icon with a motion of its own." />
-    <title>Ikoons — kivz</title>
+    <meta name="description" content="Icons for React that move: every one in its own way when its button is hovered or pressed. Filled or outline at any line width, any size and colour; copy one as SVG, PNG or code." />
+    <title>Ikoons — icons that move</title>
     <link rel="icon" href="/favicon.svg" type="image/svg+xml" />
     <style>html, body { background: #141414 }</style>
+    <script>
+      // opened from kivz.dev's ikoons card: its mark has just flown to where the wordmark sits, so the page comes in
+      // around it (page.css, [data-from]) — before anything paints; the mark of it leaves the address at once
+      if (new URLSearchParams(location.search).get('from') === 'kivz') {
+        document.documentElement.dataset.from = 'kivz'
+        history.replaceState(null, '', location.pathname + location.hash)
+        setTimeout(() => delete document.documentElement.dataset.from, 2500)
+      }
+    </script>
   </head>
   <body>
     <div id="root"></div>

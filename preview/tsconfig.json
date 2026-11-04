@@ -17,7 +17,9 @@
     "paths": {
       "ikoons": ["../packages/icons/src/index.ts"],
       "ikoons/all": ["../packages/icons/src/icons/all.ts"],
-      "ikoons/motion": ["../packages/icons/src/motion.ts"]
+      "ikoons/motion": ["../packages/icons/src/motion.ts"],
+      "ikoons/icons/*": ["../packages/icons/src/icons/*"],
+      "@lib/*": ["../packages/icons/src/*"]
     }
   },
   "include": ["src", "vite.config.ts"]

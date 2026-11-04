@@ -1,0 +1,5 @@
+{
+  "buildCommand": "npm run preview:build",
+  "outputDirectory": "preview/dist",
+  "rewrites": [{ "source": "/(.*)", "destination": "/index.html" }]
+}
