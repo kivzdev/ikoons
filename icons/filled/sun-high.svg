@@ -1,0 +1,12 @@
+<svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg" data-placeholder="true">
+<!-- PLACEHOLDER: Tabler Icons' drawing (MIT, © Paweł Kuna; see icons/NOTICE.md), its lines named for the motion. Replace it with Kivz's drawing of the same name (same file name, same layer names). -->
+<path d="M13.315 7.114a5 5 0 1 1-2.532 9.674a5 5 0 0 1 2.532-9.674" fill="#EAEAE9"/>
+<path d="M7.05 16.95a1 1 0 0 1 0 1.414l-1.414 1.414a1 1 0 1 1-1.414-1.414l1.414-1.414a1 1 0 0 1 1.414 0" fill="#EAEAE9"/>
+<path d="M5.636 4.222l1.414 1.414a1 1 0 0 1-1.414 1.414l-1.414-1.414a1 1 0 0 1 1.414-1.414" fill="#EAEAE9"/>
+<path d="M19.778 4.222a1 1 0 0 1 0 1.414l-1.414 1.414a1 1 0 0 1-1.414-1.414l1.414-1.414a1 1 0 0 1 1.414 0" fill="#EAEAE9"/>
+<path d="M18.364 16.95l1.414 1.414a1 1 0 0 1-1.414 1.414l-1.414-1.414a1 1 0 0 1 1.414-1.414" fill="#EAEAE9"/>
+<path d="M4 11a1 1 0 0 1 0 2h-2a1 1 0 0 1 0-2z" fill="#EAEAE9"/>
+<path d="M12 1a1 1 0 0 1 1 1v2a1 1 0 0 1-2 0v-2a1 1 0 0 1 1-1" fill="#EAEAE9"/>
+<path d="M22 11a1 1 0 0 1 0 2h-2a1 1 0 0 1 0-2z" fill="#EAEAE9"/>
+<path d="M12 19a1 1 0 0 1 1 1v2a1 1 0 0 1-2 0v-2a1 1 0 0 1 1-1" fill="#EAEAE9"/>
+</svg>

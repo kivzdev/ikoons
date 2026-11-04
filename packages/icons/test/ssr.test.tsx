@@ -16,9 +16,10 @@ describe('on a server', () => {
   })
 
   it('is filled unless asked for outline, and draws lines at the stroke width asked for', () => {
-    expect(html(<Bell />)).toContain('M10 19.5a2 2 0 0 0 4 0Z')
+    // (the clapper: a solid drop filled, a line in outline)
+    expect(html(<Bell />)).toContain('M14.235 19c')
     const outline = html(<Bell weight="outline" strokeWidth={1.5} />)
-    expect(outline).toContain('M10 19.5a2 2 0 0 0 4 0"')
+    expect(outline).toContain('M9 17v1a3 3 0 0 0 6 0v-1"')
     expect(outline).toContain('stroke-width="1.5"')
     expect(outline).toContain('fill="none"')
   })
@@ -46,8 +47,8 @@ describe('on a server', () => {
   it('takes its defaults from a provider, its own props winning', () => {
     const s = html(<IconProvider size={20} weight="outline"><Bell /><Bell weight="filled" /></IconProvider>)
     expect(s.match(/width="20"/g)).toHaveLength(2)
-    expect(s).toContain('M10 19.5a2 2 0 0 0 4 0"')
-    expect(s).toContain('M10 19.5a2 2 0 0 0 4 0Z')
+    expect(s).toContain('M9 17v1a3 3 0 0 0 6 0v-1"')
+    expect(s).toContain('M14.235 19c')
   })
 
   it('falls back to the weight that is drawn (a logo has only its filled one)', () => {

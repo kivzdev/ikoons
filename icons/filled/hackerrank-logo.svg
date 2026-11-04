@@ -1,0 +1,9 @@
+<svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg" data-placeholder="true">
+<!-- PLACEHOLDER: Tabler Icons' drawing (MIT, © Paweł Kuna; see icons/NOTICE.md), its lines named for the motion. Replace it with Kivz's drawing of the same name (same file name, same layer names). -->
+<path d="M19.484 5.667c-1.146-0.904-3.35-2.394-6.497-3.429c-0.484-0.159-0.725-0.238-1.04-0.238c-0.314 0-0.556 0.08-1.04 0.238c-3.147 1.035-5.35 2.525-6.496 3.43c-0.402 0.317-0.604 0.476-0.797 0.816c-0.194 0.341-0.233 0.62-0.309 1.178a33 33 0 0 0-0.305 4.338c0 1.742 0.165 3.317 0.305 4.338c0.076 0.558 0.115 0.837 0.309 1.178c0.193 0.34 0.395 0.5 0.797 0.817c1.146 0.904 3.35 2.394 6.497 3.429c0.483 0.159 0.725 0.238 1.04 0.238c0.314 0 0.555-0.08 1.04-0.238c3.146-1.035 5.35-2.525 6.496-3.43c0.402-0.317 0.603-0.476 0.797-0.816c0.194-0.341 0.232-0.62 0.309-1.178c0.14-1.021 0.305-2.596 0.305-4.338s-0.165-3.317-0.305-4.338c-0.077-0.558-0.115-0.837-0.309-1.178s-0.395-0.5-0.797-0.817" stroke="#EAEAE9" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+<path d="M9 8v7" stroke="#EAEAE9" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+<path d="M9 12h6" stroke="#EAEAE9" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+<path d="M16 16h-2l1 1l1-1" stroke="#EAEAE9" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+<path d="M8 8h2l-1-1l-1 1" stroke="#EAEAE9" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+<path d="M15 9v7" stroke="#EAEAE9" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+</svg>

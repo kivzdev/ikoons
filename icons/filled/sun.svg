@@ -1,12 +1,12 @@
 <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg" data-placeholder="true">
-<!-- PLACEHOLDER: a stand-in so the pipeline and the motions have something to run on. Replace it with Kivz's drawing of the same name (same file name, same layer names). -->
-<circle id="core" cx="12" cy="12" r="4" fill="#EAEAE9" stroke="#EAEAE9" stroke-width="2" stroke-linejoin="round"/>
-<path id="ray" d="M12 5.25L12 3.25" stroke="#EAEAE9" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
-<path id="ray_2" d="M16.77 7.23L18.19 5.81" stroke="#EAEAE9" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
-<path id="ray_3" d="M18.75 12L20.75 12" stroke="#EAEAE9" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
-<path id="ray_4" d="M16.77 16.77L18.19 18.19" stroke="#EAEAE9" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
-<path id="ray_5" d="M12 18.75L12 20.75" stroke="#EAEAE9" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
-<path id="ray_6" d="M7.23 16.77L5.81 18.19" stroke="#EAEAE9" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
-<path id="ray_7" d="M5.25 12L3.25 12" stroke="#EAEAE9" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
-<path id="ray_8" d="M7.23 7.23L5.81 5.81" stroke="#EAEAE9" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+<!-- PLACEHOLDER: Tabler Icons' drawing (MIT, © Paweł Kuna; see icons/NOTICE.md), its lines named for the motion. Replace it with Kivz's drawing of the same name (same file name, same layer names). -->
+<path id="core" d="M12 7a5 5 0 1 1-4.995 5.217l-0.005-0.217l0.005-0.217a5 5 0 0 1 4.995-4.783z" fill="#EAEAE9"/>
+<path id="ray" d="M12 2a1 1 0 0 1 0.993 0.883l0.007 0.117v1a1 1 0 0 1-1.993 0.117l-0.007-0.117v-1a1 1 0 0 1 1-1z" fill="#EAEAE9"/>
+<path id="ray_2" d="M19.107 4.893a1 1 0 0 1 0.083 1.32l-0.083 0.094l-0.7 0.7a1 1 0 0 1-1.497-1.32l0.083-0.094l0.7-0.7a1 1 0 0 1 1.414 0z" fill="#EAEAE9"/>
+<path id="ray_3" d="M21 11a1 1 0 0 1 0.117 1.993l-0.117 0.007h-1a1 1 0 0 1-0.117-1.993l0.117-0.007h1z" fill="#EAEAE9"/>
+<path id="ray_4" d="M18.313 16.91l0.094 0.083l0.7 0.7a1 1 0 0 1-1.32 1.497l-0.094-0.083l-0.7-0.7a1 1 0 0 1 1.218-1.567l0.102 0.07z" fill="#EAEAE9"/>
+<path id="ray_5" d="M12 19a1 1 0 0 1 0.993 0.883l0.007 0.117v1a1 1 0 0 1-1.993 0.117l-0.007-0.117v-1a1 1 0 0 1 1-1z" fill="#EAEAE9"/>
+<path id="ray_6" d="M7.007 16.993a1 1 0 0 1 0.083 1.32l-0.083 0.094l-0.7 0.7a1 1 0 0 1-1.497-1.32l0.083-0.094l0.7-0.7a1 1 0 0 1 1.414 0z" fill="#EAEAE9"/>
+<path id="ray_7" d="M4 11a1 1 0 0 1 0.117 1.993l-0.117 0.007h-1a1 1 0 0 1-0.117-1.993l0.117-0.007h1z" fill="#EAEAE9"/>
+<path id="ray_8" d="M6.213 4.81l0.094 0.083l0.7 0.7a1 1 0 0 1-1.32 1.497l-0.094-0.083l-0.7-0.7a1 1 0 0 1 1.217-1.567l0.102 0.07z" fill="#EAEAE9"/>
 </svg>

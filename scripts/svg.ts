@@ -101,8 +101,11 @@ const GEOMETRY: Record<string, string[]> = {
 }
 /** the width every line is drawn at, on the 24 grid: `strokeWidth` is a multiple of it */
 export const LINE = 2
-// what Figma calls a layer it wasn't given a name for — those aren't parts
-const UNNAMED = /^(vector|rectangle|ellipse|line|polygon|star|union|subtract|intersect|exclude|group|frame|layer|path|shape|arrow|boolean|mask|clip|vector-stroke|stroke)(-\d+)?$/
+// what Figma calls a layer it wasn't given a name for — those aren't parts. Line, Arrow, Star, Shape and Layer only
+// (and Clip) as Figma writes them, capitalised: in lowercase they're parts like any other (a list's line, an arrow, a
+// wand's star, a clipboard's clip)
+const UNNAMED = /^(vector|rectangle|ellipse|polygon|union|subtract|intersect|exclude|group|frame|path|boolean|mask|vector-stroke|stroke)(-\d+)?$|^clip\d/
+const FIGMA_NAMED = /^(Line|Arrow|Star|Shape|Layer|Clip)([\s_]\d+)?$/
 
 const round = (n: number, digits = 3) => +n.toFixed(digits)
 
@@ -120,6 +123,7 @@ const roundNumbers = (s: string) => s.replace(/[+-]?(?:\d+\.?\d*|\.\d+)(?:[eE][+
 
 /** a Figma layer name (exported as an id) → a part name, or null for an unnamed layer */
 export function partName(id: string, icon: string): string | null {
+  if (FIGMA_NAMED.test(id.trim())) return null
   const name = id.replace(/_\d+$/, '').trim().toLowerCase().replace(/[\s_]+/g, '-')
   if (!name || name === icon || id.includes('/') || UNNAMED.test(name)) return null
   return name

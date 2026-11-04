@@ -1,5 +1,9 @@
 <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg" data-placeholder="true">
-<!-- PLACEHOLDER: a stand-in so the pipeline and the motions have something to run on. Replace it with Kivz's drawing of the same name (same file name, same layer names). -->
-<path id="flap" d="M4 5.5h16l-8 5.6Z" fill="#EAEAE9" stroke="#EAEAE9" stroke-width="2" stroke-linejoin="round"/>
-<path id="body" d="M3 8.4l9 6.3 9-6.3V17a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2Z" fill="#EAEAE9" stroke="#EAEAE9" stroke-width="2" stroke-linejoin="round"/>
+<!-- PLACEHOLDER: Tabler Icons' drawing (MIT, © Paweł Kuna; see icons/NOTICE.md), its lines named for the motion. Replace it with Kivz's drawing of the same name (same file name, same layer names). -->
+<path d="M22 7.535v9.465a3 3 0 0 1-2.824 2.995l-0.176 0.005h-14a3 3 0 0 1-2.995-2.824l-0.005-0.176v-9.465l9.445 6.297l0.116 0.066a1 1 0 0 0 0.878 0l0.116-0.066l9.445-6.297z" fill="#EAEAE9"/>
+<path id="flap" d="M19 4c1.08 0 2.027 0.57 2.555 1.427l-9.555 6.37l-9.555-6.37a2.999 2.999 0 0 1 2.354-1.42l0.201-0.007h14z" fill="#EAEAE9"/>
+<g id="fx-letter">
+  <path d="M7.5 9.5v-4a1 1 0 0 1 1-1h7a1 1 0 0 1 1 1v4" stroke="#EAEAE9" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+  <path d="M10.5 7.5h3" stroke="#EAEAE9" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+</g>
 </svg>

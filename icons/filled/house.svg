@@ -1,5 +1,5 @@
 <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg" data-placeholder="true">
-<!-- PLACEHOLDER: a stand-in so the pipeline and the motions have something to run on. Replace it with Kivz's drawing of the same name (same file name, same layer names). -->
-<path id="roof" d="M3 10.5L12 3l9 7.5Z" fill="#EAEAE9" stroke="#EAEAE9" stroke-width="2" stroke-linejoin="round"/>
-<path id="base" d="M5.5 13h13v6a1.5 1.5 0 0 1-1.5 1.5H14v-5h-4v5H7A1.5 1.5 0 0 1 5.5 19Z" fill="#EAEAE9" stroke="#EAEAE9" stroke-width="2" stroke-linejoin="round"/>
+<!-- PLACEHOLDER: Tabler Icons' drawing (MIT, © Paweł Kuna; see icons/NOTICE.md), its lines named for the motion. Replace it with Kivz's drawing of the same name (same file name, same layer names). -->
+<path id="roof" d="M12.707 2.293l9 9c0.63 0.63 0.184 1.707-0.707 1.707h-1v6a3 3 0 0 1-3 3h-1v-7a3 3 0 0 0-2.824-2.995l-0.176-0.005h-2a3 3 0 0 0-3 3v7h-1a3 3 0 0 1-3-3v-6h-1c-0.89 0-1.337-1.077-0.707-1.707l9-9a1 1 0 0 1 1.414 0" fill="#EAEAE9"/>
+<path d="M13 14a1 1 0 0 1 1 1v7h-4v-7a1 1 0 0 1 0.883-0.993l0.117-0.007z" fill="#EAEAE9"/>
 </svg>

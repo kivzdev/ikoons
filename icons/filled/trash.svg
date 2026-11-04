@@ -1,8 +1,5 @@
 <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg" data-placeholder="true">
-<!-- PLACEHOLDER: a stand-in so the pipeline and the motions have something to run on. Replace it with Kivz's drawing of the same name (same file name, same layer names). -->
-<g id="lid">
-<path d="M3.75 5.5h16.5" stroke="#EAEAE9" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"/>
-<path d="M9.5 5.5V4.25a1.25 1.25 0 0 1 1.25-1.25h2.5a1.25 1.25 0 0 1 1.25 1.25V5.5" stroke="#EAEAE9" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
-</g>
-<path id="can" d="M5.75 8.5h12.5l-1 10.7a2 2 0 0 1-2 1.8h-6.5a2 2 0 0 1-2-1.8Z" fill="#EAEAE9" stroke="#EAEAE9" stroke-width="2" stroke-linejoin="round"/>
+<!-- PLACEHOLDER: Tabler Icons' drawing (MIT, © Paweł Kuna; see icons/NOTICE.md), its lines named for the motion. Replace it with Kivz's drawing of the same name (same file name, same layer names). -->
+<path id="lid" d="M14 2a2 2 0 0 1 2 2a1 1 0 0 1-1.993 0.117l-0.007-0.117h-4l-0.007 0.117a1 1 0 0 1-1.993-0.117a2 2 0 0 1 1.85-1.995l0.15-0.005z" fill="#EAEAE9"/>
+<path d="M20 6a1 1 0 0 1 0.117 1.993l-0.117 0.007h-0.081l-0.919 11a3 3 0 0 1-2.824 2.995l-0.176 0.005h-8c-1.598 0-2.904-1.249-2.992-2.75l-0.005-0.167l-0.923-11.083h-0.08a1 1 0 0 1-0.117-1.993l0.117-0.007zM10 10a1 1 0 0 0-1 1v6a1 1 0 0 0 2 0v-6a1 1 0 0 0-1-1M14 10a1 1 0 0 0-1 1v6a1 1 0 0 0 2 0v-6a1 1 0 0 0-1-1" fill="#EAEAE9"/>
 </svg>

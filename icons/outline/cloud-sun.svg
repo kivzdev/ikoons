@@ -1,0 +1,12 @@
+<svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg" data-placeholder="true">
+<!-- PLACEHOLDER: a stand-in drawn on Tabler's grid (24, 2-unit round lines), its lines named for the motion. Replace it with Kivz's drawing of the same name (same file name, same layer names). -->
+<g id="sun">
+  <path d="M10.6 5.6a3.5 3.5 0 1 0-4.3 5.4" stroke="#EAEAE9" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+  <path d="M8 2v1" stroke="#EAEAE9" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+  <path d="M2 8h1" stroke="#EAEAE9" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+  <path d="M3.75 3.75l0.7 0.7" stroke="#EAEAE9" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+  <path d="M12.25 3.75l-0.7 0.7" stroke="#EAEAE9" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+  <path d="M3.75 12.25l0.7-0.7" stroke="#EAEAE9" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+</g>
+<path d="M9.5 20h9.25a3.25 3.25 0 0 0 0-6.5h-0.75a4.75 4.25 0 0 0-9.25-1.5a3.95 3.9 0 0 0 0.75 8" stroke="#EAEAE9" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+</svg>

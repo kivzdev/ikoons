@@ -1,0 +1,7 @@
+<svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg" data-placeholder="true">
+<!-- PLACEHOLDER: Tabler Icons' drawing (MIT, © Paweł Kuna; see icons/NOTICE.md), its lines named for the motion. Replace it with Kivz's drawing of the same name (same file name, same layer names). -->
+<path d="M8 9.585v6.415h6.414l-2.707 2.707a1 1 0 0 1-0.112 0.097l-0.11 0.071l-0.114 0.054l-0.105 0.035l-0.149 0.03l-0.117 0.006h-4.586l-1.707 1.707a1 1 0 1 1-1.414-1.414l1.707-1.709v-4.584l0.003-0.075l0.017-0.126l0.03-0.111l0.044-0.111l0.052-0.098l0.067-0.096l0.08-0.09z" fill="#EAEAE9"/>
+<path d="M13 4.586v4.998l-3 3v-4.999z" fill="#EAEAE9"/>
+<path d="M16.482 3a4.515 4.515 0 0 1 4.518 4.514a4.7 4.7 0 0 1-0.239 1.487l-5.761-0.001v-5.76c0.469-0.158 0.968-0.24 1.482-0.24" fill="#EAEAE9"/>
+<path d="M19.414 11l-3 3h-4.914l2.914-3z" fill="#EAEAE9"/>
+</svg>

@@ -108,5 +108,7 @@ describe('part names', () => {
   it.each([
     ['clapper', 'clapper'], ['Clapper', 'clapper'], ['ray_12', 'ray'], ['link a', 'link-a'], ['fx-glint_3', 'fx-glint'],
     ['Vector', null], ['Vector_7', null], ['Rectangle 12', null], ['Union', null], ['bell', null], ['filled/bell', null],
+    ['line', 'line'], ['arrow_2', 'arrow'], ['star', 'star'], ['Line', null], ['Line 3', null], ['Arrow_2', null], ['Star 1', null],
+    ['clip', 'clip'], ['Clip', null], ['clip0_12_34', null],
   ])('%s → %s', (id, name) => expect(partName(id, 'bell')).toBe(name))
 })

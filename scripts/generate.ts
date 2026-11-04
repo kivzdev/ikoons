@@ -5,7 +5,7 @@
 import { mkdir, readdir, readFile, rm, writeFile } from 'node:fs/promises'
 import { join, resolve } from 'node:path'
 import { fileURLToPath } from 'node:url'
-import { entries, groups, pairs, type Motion } from '../icons/catalog.ts'
+import { allGroups, entries, pairs, type Motion } from '../icons/catalog.ts'
 import { DrawingError, normalise, reactAttrs, reactNodes, toSvg, type Drawing } from './svg.ts'
 
 const ROOT = fileURLToPath(new URL('..', import.meta.url))
@@ -98,8 +98,9 @@ export async function generate({ root = ROOT }: { root?: string } = {}): Promise
   }
   if (problems.length) throw new DrawingError(problems.join('\n'))
 
-  // the catalog's order (groups, then each group's list)
-  const order = groups.flatMap(g => g.icons.map(e => e.name)).filter(n => drawings.has(n))
+  // the catalog's order (the curated groups, then the generated ones; each group's list)
+  const order = allGroups.flatMap(g => g.icons.map(e => e.name)).filter(n => drawings.has(n))
+  const titles = new Map(allGroups.map(g => [g.id, g.title]))
   const files = new Map<string, string>()
   const placeholders: string[] = []
 
@@ -110,7 +111,8 @@ export async function generate({ root = ROOT }: { root?: string } = {}): Promise
     const placeholder = weights.some(w => d[w]!.placeholder)
     if (placeholder) placeholders.push(name)
     // (logos are drawn filled only)
-    if (e.group !== 'brands' && weights.length < 2) warnings.push(`${name}: only ${weights[0]} is drawn — ${weights[0] === 'filled' ? 'outline' : 'filled'} shows it too`)
+    const logo = e.group === 'brands' || e.motion[0] === 'brand'
+    if (!logo && weights.length < 2) warnings.push(`${name}: only ${weights[0]} is drawn — ${weights[0] === 'filled' ? 'outline' : 'filled'} shows it too`)
     const seen = new Set<string>()
     for (const { part, extra } of needs(e.motion)) {
       if (seen.has(part)) continue
@@ -139,7 +141,6 @@ export async function generate({ root = ROOT }: { root?: string } = {}): Promise
     if (placeholder) extra.push('placeholder: true')
 
     const sources = weights.map(w => `icons/${w}/${name}.svg`).join(' and ')
-    const group = groups.find(g => g.icons.some(i => i.name === name))!
     const shown = d.filled ?? d.outline!
     const preview = Buffer.from(toSvg(shown, { size: 48, colour: '#eaeae9', background: '#141414' })).toString('base64')
     const drawn = weights
@@ -152,7 +153,7 @@ export async function generate({ root = ROOT }: { root?: string } = {}): Promise
     ].filter(Boolean)
     const doc = [
       `/**`,
-      ` * ${name} — ${group.title}${e.star ? ' ★' : ''}${placeholder ? ' (placeholder drawing)' : ''}`,
+      ` * ${name} — ${titles.get(e.group)}${e.star ? ' ★' : ''}${placeholder ? ' (placeholder drawing)' : ''}`,
       ` *`,
       ` * Motion: ${e.motion[0]}${e.loop ? ', on and on' : ''}${to.length ? `; to ${pairs.filter(p => p[0] === name && drawings.has(p[1])).map(p => p[1]).join(', ')} by ${[...transitions].join(', ')}` : ''}.`,
       e.idea ? ` * Kivz: “${e.idea}”` : '',
