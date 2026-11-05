@@ -12,9 +12,9 @@ import { COUNT, GROUPS, useGroup } from './icons'
 
 // The icons page (Kivz's design, 2026-11-05): the banner, the search with "Play all" beside it, and the grid — every
 // icon, or only the category picked in the right rail. Five thousand of them, so only the blocks near the screen (ninety
-// icons each) are drawn at all: one comes in as you scroll to it — its boxes breathing as skeletons while its group's
-// chunk arrives, then its icons one after another in reading order — and goes back to an empty space of its own height
-// once it's far behind (Kivz: "the site eats far too much memory"). The search knows every name from the start, and
+// icons each) are drawn at all: one comes in as you scroll to it — once its group's chunk is here, its icons blur in one
+// after another, from its top scrolling down and from its foot scrolling up — and goes back to an empty space of its
+// own height once it's far behind (Kivz: "the site eats far too much memory"). The search knows every name from the start, and
 // Tabler's tags once you type.
 
 type Tags = Record<string, string>
@@ -191,25 +191,30 @@ export function Catalog({ look, picked, pick, category, phone }: Omit<Cells, 'we
 }
 
 /**
- * up to ninety icons of a group, drawn only while the block is near the screen: coming in, its boxes breathe as
- * skeletons until its group's chunk is here, then its icons come one after another (reading order); far behind again,
- * it's an empty space as tall as its rows
+ * up to ninety icons of a group, drawn only while the block is near the screen: coming in, its boxes wait empty until
+ * its group's chunk is here, then its icons come one after another (in reading order, or backwards when it came in
+ * from above); far behind again, it's an empty space as tall as its rows
  */
 function Block({ group, names, cols, look, weight, picked, pick }: Cells & { group: string; names: string[]; cols: number }) {
   const ref = useRef<HTMLDivElement>(null)
-  const [near, setNear] = useState(false)
+  // near the screen, and which way it came in: scrolling down a block comes in from below and its icons come one after
+  // another from its top; scrolling up it comes in from above, and they come from its foot up (Kivz)
+  const [near, setNear] = useState<false | 'down' | 'up'>(false)
   const tall = useRef<number | null>(null)
   useEffect(() => {
     const el = ref.current!
     // (a block's ninety icons are drawn in between frames, not in one go: scrolling never waits for them)
-    const io = new IntersectionObserver(([e]) => startTransition(() => setNear(e.isIntersecting)), { rootMargin: '400px 0px' })
+    const io = new IntersectionObserver(([e]) => {
+      const now = e.isIntersecting && (e.boundingClientRect.top < 0 ? 'up' : 'down')
+      startTransition(() => setNear(now))
+    }, { rootMargin: '400px 0px' })
     io.observe(el)
     // (the height it had while drawn: what it leaves behind)
     const ro = new ResizeObserver(() => { if (el.firstElementChild) tall.current = el.offsetHeight })
     ro.observe(el)
     return () => { io.disconnect(); ro.disconnect() }
   }, [])
-  const icons = useGroup(group, near)
+  const icons = useGroup(group, !!near)
   const byName = useMemo(() => new Map(icons?.map(i => [i.data.name, i])), [icons])
   const size = Math.min(look.size, 40)
   const away = Math.ceil(names.length / cols) * 50 - 2
@@ -224,7 +229,7 @@ function Block({ group, names, cols, look, weight, picked, pick }: Cells & { gro
                 <button
                   type="button"
                   className={I ? 'cell' : 'cell cell-wait'}
-                  style={{ '--k': k, '--row': Math.floor(k / cols) } as CSSProperties}
+                  style={{ '--k': near === 'up' ? names.length - 1 - k : k } as CSSProperties}
                   aria-label={name}
                   aria-pressed={!!I && picked === I}
                   onClick={() => I && pick(I)}

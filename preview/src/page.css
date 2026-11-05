@@ -250,10 +250,9 @@
    again. Nothing is left on it once it's in */
 .cell:not(.cell-wait) { animation: icon-in 0.5s cubic-bezier(0.61, 1, 0.88, 1) backwards; animation-delay: calc(var(--k, 0) * 8ms) }
 @keyframes icon-in { from { opacity: 0; filter: blur(4px) } }
-/* a box whose drawing is on its way (its group's chunk is coming): the box itself as a skeleton, darker than the
-   highlight, breathing row by row (its opacity: no repaint) */
-.cell-wait { cursor: default; background: rgb(86 86 86 / 0.07); animation: skel 1.6s ease-in-out infinite; animation-delay: calc(var(--row, 0) * 120ms) }
-@keyframes skel { 50% { opacity: 0.5 } }
+/* a box whose drawing is on its way (its group's chunk is coming) is simply empty: the drawing blurs in when it's
+   here (Kivz: no skeletons, the blur is enough) */
+.cell-wait { cursor: default }
 /* while the page is moving, the boxes passing under the pointer don't light up one after another (scroll.ts) */
 [data-scrolling] .groups { pointer-events: none }
 
@@ -341,7 +340,7 @@
   @keyframes fade { from { opacity: 0 } }
   .card-kivz[data-on] .card-face { animation: none }
   .hero-row { animation: none }
-  .cell, .cell-wait { animation: none }
+  .cell { animation: none }
   [data-came] { animation: none }
 }
 
