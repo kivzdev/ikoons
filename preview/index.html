@@ -14,7 +14,14 @@
       if (new URLSearchParams(location.search).get('from') === 'kivz') {
         document.documentElement.dataset.from = 'kivz'
         history.replaceState(null, '', location.pathname + location.hash)
-        setTimeout(() => delete document.documentElement.dataset.from, 2500)
+        // once every part has come in, the mark comes off — each part that came in keeping its place (taking the mark
+        // off alone would start every part's usual entrance again: the page faded out and rose a second time)
+        const done = () => {
+          if (document.getAnimations().some(a => a.animationName === 'part-in' && a.playState === 'running')) return void setTimeout(done, 250)
+          document.querySelectorAll('[data-in], .rail-l > *, .byline').forEach(el => { el.style.animation = 'none' })
+          delete document.documentElement.dataset.from
+        }
+        addEventListener('load', () => setTimeout(done, 1000))
       }
     </script>
   </head>
