@@ -1,18 +1,21 @@
-/* Kivz design tokens (kivz.dev v3). Import before site.css. Load the font with @fontsource-variable/inter. */
+/* Kivz design tokens (kivz.dev v3), on a colour of ikoons' own. Import before page.css. Load the font with
+   @fontsource-variable/inter. */
 :root {
-  /* colour */
-  --bg: #141414;
-  --fg: #eaeae9;                 /* primary text, lit controls */
-  --fg-2: #565656;               /* everything secondary */
-  --hair: #1d1d1d;               /* 1 px rules between rows */
-  --fill: rgb(86 86 86 / 0.14);  /* hover / active highlight (#1d1d1d on the ground) */
-  --skel: rgb(86 86 86 / 0.28);  /* a skeleton at its fullest (#262626 on the ground)… */
-  --skel-lo: rgb(86 86 86 / 0.13); /* …and as it breathes out (#1c1c1c) */
+  /* colour: blacker than kivz.dev (Kivz, 2026-11-06: the sites should differ). A near-black ground, and each step up
+     from it a little lighter (L* 2.7 → 5.1 → 7.7 → 9.3 → 11.8); contrast on the ground in brackets */
+  --bg: #0a0a0a;                    /* the ground (and index.html's first paint and theme colour) */
+  --well: #111111;                  /* a plate on it, one quiet step up: the banner, the sheet's tile, code */
+  --fill: rgb(255 255 255 / 0.055); /* the hover / active highlight, the search, a range's box (#171717 on the ground) */
+  --hair: #1a1a1a;                  /* 1 px rules */
+  --fill-2: rgb(255 255 255 / 0.085); /* a step past the fill: a range's lit share, a line hovered, a switch's track
+                                         (#1f1f1f on the ground, #2b2b2b on the fill) */
+  --fg: #eaeae9;                    /* primary text, lit controls (16.5:1) */
+  --fg-2: #5f5f5f;                  /* everything secondary (3.1:1; 2.8:1 on the fill) */
+  --ring: var(--fg-2);              /* a focus ring */
   --blue: #007afd;               /* doodle stars, # icon tint */
   --green: #55ff5e;              /* doodle sparkles, ✉ icon tint */
   --mascot: #fdd900;             /* the mascot, ★ icon tint */
   --pink: #ff5fa8;               /* ⌂ icon tint (Home) */
-  --text: var(--fg);             /* (alias used by older pieces: selection, intro) */
 
   /* type: one size, hierarchy by colour */
   --sans: 'Inter Variable', 'Inter', -apple-system, 'SF Pro Text', system-ui, sans-serif;
@@ -24,8 +27,14 @@
   /* the control box: every button is this */
   --ctl: 30px;
   --ctl-x: 12px;
-  --ctl-r: 6px;
+  --ctl-r: calc(6px * var(--round));
   --icon: 14px;
+
+  /* corners, on one switch: 1 rounds them (6 px a control, 12 a plate, 20 a panel, 4 a chip, the switch a pill), 0
+     makes every one square (Kivz, 2026-11-06: sharper edges everywhere) */
+  --round: 0;
+  --chip-r: calc(4px * var(--round));   /* inline code, the search's clear button */
+  --panel-r: calc(20px * var(--round)); /* the banner, the sheet */
 
   /* lists */
   --row: 36px;                   /* a table row, its rule included */
@@ -38,8 +47,7 @@
   --top: 40px;                   /* the logo's line */
   --start: 120px;                /* where every column starts */
 
-  --well: #191918; /* a figure's plate in a post (ui/Preview.tsx): one quiet step up from the ground */
-  --plate-r: 12px; /*   its corner (two control corners) */
+  --plate-r: calc(12px * var(--round)); /* a plate's corner (two control corners); its colour is --well */
 
   /* motion, for CSS transitions (GSAP: motion/gsap.ts registers the same curves by name) */
   --ease-soft: cubic-bezier(.22, 1, .36, 1);

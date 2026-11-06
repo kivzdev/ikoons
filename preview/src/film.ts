@@ -31,7 +31,7 @@ const strip = () => {
   if (!el) {
     el = document.createElement('div')
     el.id = 'film'
-    el.style.cssText = 'position:fixed;inset:0 0 auto 0;z-index:99999;display:flex;flex-direction:column;gap:6px;max-height:100vh;overflow:auto;padding:8px;background:#141414;font:12px "Inter Variable",sans-serif;color:#565656'
+    el.style.cssText = 'position:fixed;inset:0 0 auto 0;z-index:99999;display:flex;flex-direction:column;gap:6px;max-height:100vh;overflow:auto;padding:8px;background:var(--bg);font:12px "Inter Variable",sans-serif;color:var(--fg-2)'
     document.body.appendChild(el)
   }
   return el
@@ -47,11 +47,11 @@ const picture = (svg: SVGSVGElement) => {
 const film = (label: string, svg: SVGSVGElement, { every = 0.05, n = 11, px = 76 } = {}) => {
   const row = document.createElement('div')
   row.style.cssText = 'display:flex;gap:2px;align-items:center'
-  row.innerHTML = `<span style="flex:none;width:92px;color:#eaeae9">${label}</span>`
+  row.innerHTML = `<span style="flex:none;width:92px;color:var(--fg)">${label}</span>`
   for (let i = 0; i < n; i++) {
     if (i) step(every)
     const cell = document.createElement('div')
-    cell.style.cssText = 'display:flex;flex-direction:column;align-items:center;border:1px solid #1d1d1d;border-radius:4px'
+    cell.style.cssText = 'display:flex;flex-direction:column;align-items:center;border:1px solid var(--hair);border-radius:4px'
     cell.innerHTML = `<img src="${picture(svg)}" width="${px}" height="${px}"><span style="font-size:10px">${(i * every).toFixed(2)}</span>`
     row.appendChild(cell)
   }
